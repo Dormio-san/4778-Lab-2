@@ -23,5 +23,19 @@ public class CubeBehaviorEditor : Editor
                 Selection.objects = new Object[] { (target as CubeBehavior).gameObject };
             }
         }
+
+        // Change the color of the enable and disable button.
+        //var originalColor = GUI.backgroundColor;
+        GUI.backgroundColor = Color.green;
+
+
+        if (GUILayout.Button("Disable/Enable all cubes", GUILayout.Height(40), GUILayout.Width(215)))
+        {
+            foreach (var cube in GameObject.FindObjectsOfType<CubeBehavior>(true))
+            {
+                Undo.RecordObject(cube.gameObject, "Disable/Enable all cubes");
+                cube.gameObject.SetActive(!cube.gameObject.activeSelf);
+            }
+        }
     }
 }
