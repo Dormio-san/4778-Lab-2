@@ -29,7 +29,7 @@ public class SphereBehaviorEditor : Editor
         GUI.backgroundColor = Color.green;
         
 
-        if (GUILayout.Button("Disable/Enable all spheres", GUILayout.Height(40), GUILayout.Width(215)))
+        if (GUILayout.Button("Disable/Enable all spheres", GUILayout.Height(40)))
         {
             foreach (var sphere in GameObject.FindObjectsOfType<SphereBehavior>(true))
             {

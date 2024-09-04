@@ -27,9 +27,9 @@ public class CubeBehaviorEditor : Editor
         // Change the color of the enable and disable button.
         //var originalColor = GUI.backgroundColor;
         GUI.backgroundColor = Color.green;
+        
 
-
-        if (GUILayout.Button("Disable/Enable all cubes", GUILayout.Height(40), GUILayout.Width(215)))
+        if (GUILayout.Button("Disable/Enable all cubes", GUILayout.Height(40)))
         {
             foreach (var cube in GameObject.FindObjectsOfType<CubeBehavior>(true))
             {
