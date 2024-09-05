@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class SphereBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float sphereSize = 1.0f;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        this.gameObject.transform.localScale = new Vector3(sphereSize, sphereSize, sphereSize);
     }
 }

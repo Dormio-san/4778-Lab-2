@@ -210,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4622694922832173784, guid: cbfa32bf62b3e1f43acc1e789955aacc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.48
+      value: 4.68
       objectReference: {fileID: 0}
     - target: {fileID: 4622694922832173784, guid: cbfa32bf62b3e1f43acc1e789955aacc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -246,6 +246,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4622694922832173784, guid: cbfa32bf62b3e1f43acc1e789955aacc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843965652229529067, guid: cbfa32bf62b3e1f43acc1e789955aacc, type: 3}
+      propertyPath: size
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -313,6 +317,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8633917356538893365, guid: 90c0f37a7dc7cb141b00bc3a1ae81ba0, type: 3}
+      propertyPath: sphereSize
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -377,6 +385,10 @@ PrefabInstance:
     - target: {fileID: 7747882741277474313, guid: 90c0f37a7dc7cb141b00bc3a1ae81ba0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633917356538893365, guid: 90c0f37a7dc7cb141b00bc3a1ae81ba0, type: 3}
+      propertyPath: sphereSize
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -537,6 +549,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5843965652229529067, guid: cbfa32bf62b3e1f43acc1e789955aacc, type: 3}
+      propertyPath: cubeSize
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -600,6 +616,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7747882741277474313, guid: 90c0f37a7dc7cb141b00bc3a1ae81ba0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633917356538893365, guid: 90c0f37a7dc7cb141b00bc3a1ae81ba0, type: 3}
+      propertyPath: sphereSize
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -759,6 +779,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5843965652229529067, guid: cbfa32bf62b3e1f43acc1e789955aacc, type: 3}
+      propertyPath: size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843965652229529067, guid: cbfa32bf62b3e1f43acc1e789955aacc, type: 3}
+      propertyPath: cubeSize
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -823,6 +851,10 @@ PrefabInstance:
     - target: {fileID: 4622694922832173784, guid: cbfa32bf62b3e1f43acc1e789955aacc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843965652229529067, guid: cbfa32bf62b3e1f43acc1e789955aacc, type: 3}
+      propertyPath: cubeSize
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -953,6 +985,14 @@ PrefabInstance:
     - target: {fileID: 4622694922832173784, guid: cbfa32bf62b3e1f43acc1e789955aacc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843965652229529067, guid: cbfa32bf62b3e1f43acc1e789955aacc, type: 3}
+      propertyPath: size
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843965652229529067, guid: cbfa32bf62b3e1f43acc1e789955aacc, type: 3}
+      propertyPath: cubeSize
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

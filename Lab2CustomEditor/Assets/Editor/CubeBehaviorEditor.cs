@@ -1,4 +1,5 @@
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -7,7 +8,26 @@ public class CubeBehaviorEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        base.OnInspectorGUI();
+        // Update the serialized object by finding the property called cubeSize and creating a GUI field for it that will be seen in the inspector.
+        // Then, apply the modifications, which also populates an undo operation under the edit drop down near the top left of the editor. 
+        serializedObject.Update();
+        var cubeSize = serializedObject.FindProperty("cubeSize");
+        EditorGUILayout.PropertyField(cubeSize);
+        serializedObject.ApplyModifiedProperties();
+
+        // If the cube size inputted by the user is equal to or less than 0, display a warning message.
+        if (cubeSize.floatValue <= 0)
+        {
+            EditorGUILayout.HelpBox("Cube size cannot be 0 or less! At that point does it even exist?", MessageType.Warning);
+        }
+        // Else, if the cube size is greater than 10, display a warning message that is as wide as the input box.
+        else if (cubeSize.floatValue > 10)
+        {
+            EditorGUILayout.HelpBox("Cube cannot be bigger than 10!", MessageType.Warning, false);
+        }
+
+        // This renders the default GUI of the CubeBehavior script. Commenting this out allows us to manually set what the inspector GUI looks like.
+        //base.OnInspectorGUI();
 
         // Use HorizontalScope so the two buttons are placed next to each other and fill out the horizontal space.
         using (new EditorGUILayout.HorizontalScope())

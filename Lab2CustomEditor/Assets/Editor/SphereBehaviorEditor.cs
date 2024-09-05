@@ -7,7 +7,26 @@ public class SphereBehaviorEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        base.OnInspectorGUI();
+        // Update the serialized object by finding the property called sphereSize and creating a GUI field for it that will be seen in the inspector.
+        // Then, apply the modifications, which also populates an undo operation under the edit drop down near the top left of the editor.
+        serializedObject.Update();
+        var sphereSize = serializedObject.FindProperty("sphereSize");
+        EditorGUILayout.PropertyField(sphereSize);
+        serializedObject.ApplyModifiedProperties();
+
+        // If the sphere size inputted by the user is equal to or less than 0, display a warning message.
+        if (sphereSize.floatValue <= 0)
+        {
+            EditorGUILayout.HelpBox("Sphere cannot be 0 or less! At that point does it even exist?", MessageType.Warning);
+        }
+        // Else, if the sphere size is greater than 10, display a warning message that is as wide as the input box.
+        else if (sphereSize.floatValue > 8)
+        {
+            EditorGUILayout.HelpBox("Sphere cannot be bigger than 8!", MessageType.Warning, false);
+        }
+
+        // This renders the default GUI of the SphereBehavior script. Commenting this out allows us to manually set what the inspector GUI looks like.
+        //base.OnInspectorGUI();
 
         // Use HorizontalScope so the two buttons are placed next to each other and fill out the horizontal space.
         using (new EditorGUILayout.HorizontalScope())
