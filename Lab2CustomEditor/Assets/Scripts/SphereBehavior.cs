@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class SphereBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Range(0.5f, 5f)]
+    public float radius = 1f;
 
-    // Update is called once per frame
-    void Update()
+    void OnValidate()
     {
-        
+        // Update the size of the sphere when the radius variable changes
+        transform.localScale = new Vector3(radius, radius, radius);
     }
 }
